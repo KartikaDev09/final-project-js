@@ -16,8 +16,7 @@ function onSearchChange(event) {
 function renderMovies(movies) {
   
   moviesGrid.innerHTML = movies.map((movie) => {
-  return
-    `<div class="movie-card">
+  return `<div class="movie-card">
       <img
         class="movie-card__img"
         src= "${movie.Poster}"
@@ -26,7 +25,6 @@ function renderMovies(movies) {
       <h2 class="movie-card__title">${movie.Title}</h2>
       <p class="movie-card__year">${movie.Year}</p>
     </div>`;
-  });
-  
+  }).join("");
 }
 
