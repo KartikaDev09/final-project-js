@@ -1,12 +1,23 @@
-
+const API_KEY = '540343b4';
 const moviesGrid = document.querySelector("#moviesGrid")
 const resultsInfo = document.querySelector("#resultsInfo")
+const searchInput = document.querySelector("#searchInput")
+const searchForm = document.querySelector("#searchForm");
+
 let currentMovies = []
+
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const searchTerm = searchInput.value.trim();
+  getMovies(searchTerm);
+  
+});
+
 
 async function getMovies(searchTerm) {
   resultsInfo.innerHTML = `Showing: ${searchTerm}`
-const search = await fetch(`https://www.omdbapi.com/?apikey=540343b4&s=${searchTerm}`);
-const data = await search.json();
+const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`);
+const data = await response.json();
 currentMovies = data.Search.slice(0, 10)
 renderMovies(currentMovies);
 }
@@ -26,14 +37,6 @@ function renderMovies(movies) {
     </div>`;
   }).join("");
 }
-
-const searchForm = document.querySelector("#searchForm");
-searchForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const searchTerm = document.querySelector("#searchInput").value;
-  getMovies(searchTerm);
-  
-});
 
 const sortSelect = document.querySelector("#sortSelect")
 
