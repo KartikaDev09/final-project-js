@@ -167,6 +167,25 @@ main {
   margin: -20px auto 20px;
 }
 
+.resultsInfo__video {
+  width: 56%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  transform: translate (-25%, -25%);
+  border-radius: 25%;
+}
+
+.resultsInfo__btn {
+  position: absolute;
+  margin-left: 40%;
+  width: 144px;
+  height: 40px;
+  border-radius: 25%;
+  
+}
+
+
 #sortSelect {
   border: 1px solid gray;
   padding: 2px;

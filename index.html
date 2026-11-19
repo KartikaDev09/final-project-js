@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simplified Movies API ref</title>
     <link rel="stylesheet" href="style.css" />
+    
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -50,6 +51,13 @@
     <main>
       <div class="controls">
         <p id="resultsInfo" class="resultsInfo"><span>Showing: </span>Marvel</p>
+        <button class="resultsInfo__btn">
+          <i class="fas fa-bars">Edit Search</i>
+        </button>
+        <video class="resultsInfo__video">
+          <source src="./assets/Result Not Found.mp4" type="video/mp4" />
+        </video>
+
         <div>
           <label for="sortSelect">Sort:</label>
           <select id="sortSelect">
@@ -95,11 +103,11 @@
         <div class="movie-card movie-card--skeleton">
           <img
             class="movie-card__img movie-card__img--skeleton"
-            src="https://m.media-amazon.com/images/M/MV5BODBhYTg1NGQtNGVmNS00ZTdiLThjYTYtZDFkNzRiNTZmNDZjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg"
+            src="https://m.media-amazon.com/images/M/MV5BMzU0MDkwNjA0Ml5BMl5BanBnXkFtZTcwMDczMjQ4MQ@@._V1_QL75_UX380_CR0,12,380,562_.jpg"
             alt=""
           />
-          <h2 class="movie-card__title movie-card__title--skeleton">Avengers: Age of Ultron</h2>
-          <p class="movie-card__year movie-card__year--skeleton">2015</p>
+          <h2 class="movie-card__title movie-card__title--skeleton">Ballet Shoes</h2>
+          <p class="movie-card__year movie-card__year--skeleton">2007</p>
         </div>
         <div class="movie-card movie-card--skeleton">
           <img
