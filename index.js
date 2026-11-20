@@ -4,13 +4,14 @@ const resultsInfo = document.querySelector("#resultsInfo")
 const searchInput = document.querySelector("#searchInput")
 const searchForm = document.querySelector("#searchForm");
 const errorPage = document.querySelector(".resultsInfo__errorPage")
+// Edit Search button - reset page
 document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click', () => {
   window.location.reload();
 });
 
 
 let currentMovies = []
-
+// Search movies
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const searchTerm = searchInput.value.trim();
@@ -18,9 +19,23 @@ searchForm.addEventListener("submit", (event) => {
     
 });
 
+// show skeleton loading cards
+function showSkeletons() {
+  const skeletons = Array(10).fill(0).map(() => `
+    <div class="movie-card movie-card--skeleton">
+      <div class="movie-card__img movie-card__img--skeleton"></div>
+      <div class="movie-card__title movie-card__title--skeleton"></div>
+      <div class="movie-card__year movie-card__year--skeleton"></div>
+    </div>  
+  `).join('');
 
+  moviesGrid.innerHTML = skeletons;
+}
+
+
+// fetch movies from API 
 async function getMovies(searchTerm) {
-  
+    showSkeletons();
   const response = await fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchTerm}`);
   const data = await response.json();
 
@@ -54,7 +69,7 @@ function renderMovies(movies) {
     </div>`;
   }).join("");
 }
-
+// sort movies
 const sortSelect = document.querySelector("#sortSelect")
 
 sortSelect.addEventListener('change', (e) => {sortMovies(e.target.value);
