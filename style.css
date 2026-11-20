@@ -8,6 +8,13 @@
   cursor: pointer;
 }
 
+button {
+  background-color: darkolivegreen;
+  color: white;
+  cursor: pointer;
+
+}
+
 body {
   font-family: "Geist", sans-serif;
   font-weight: 300;
@@ -207,9 +214,6 @@ main {
   
 }
 
-
-
-
 #sortSelect {
   border: 1px solid gray;
   padding: 2px;
@@ -316,6 +320,77 @@ main {
   }
 }
 
+/* CTA */
+.cta__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.container {
+  padding: 32px 0;
+}
+
+.signIn__button--wrapper {
+  width: 184px;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.signIn__btn {
+  width: 160px;
+  height: calc(100% - 32px);
+  font-weight: 700;
+    font-size: 16px;
+    border-radius: 500px;
+}
+
+.joinIn__email {
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  position: relative;
+  display: flex;
+    justify-content: flex-end;
+  align-items: center;
+}
+
+.joinIn__email-input {
+  width: 100%;
+    border-radius: 500px;
+    border: 2px solid rgb(229, 231, 235);
+    padding: 20px 192px 20px 32px;
+    color: #a0aec0;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: border-color 300ms;
+}
+
+.joinIn__email-btn {
+  width: 160px;
+    margin: 8px;
+    height: calc(100% - 16px);
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 500px;
+    z-index: 2;
+}
+
+
+/* FOOTER */
 footer {
   background: #333;
   color: white;
