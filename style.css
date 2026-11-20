@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.click {
+  cursor: pointer;
+}
+
 body {
   font-family: "Geist", sans-serif;
   font-weight: 300;
@@ -167,23 +171,44 @@ main {
   margin: -20px auto 20px;
 }
 
-.resultsInfo__video {
-  width: 56%;
+.resultsInfo__errorPage {
   position: absolute;
-  top: 25%;
-  left: 25%;
-  transform: translate (-25%, -25%);
-  border-radius: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 100%;
+  max-height: 720px;
+  max-width: 720px;
+  padding: 24px;
+
 }
 
-.resultsInfo__btn {
-  position: absolute;
+.resultsInfo__errorPage--btn {
+  /* position: absolute; */
   margin-left: 40%;
   width: 144px;
   height: 40px;
   border-radius: 25%;
   
 }
+
+.resultsInfo__errorPage--para {
+  margin-top: 80px;
+}
+
+.resultsInfo__errorPage--img-wrapper {
+  padding: 20px;
+}
+
+.resultsInfo__errorPage--img {
+  size: 100%;
+  max-width: 720px;
+  border-radius: 25%;  
+  
+}
+
+
 
 
 #sortSelect {
@@ -195,6 +220,7 @@ main {
 }
 
 .movies-grid {
+  /* position: relative; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;

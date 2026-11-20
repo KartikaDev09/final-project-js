@@ -51,13 +51,17 @@
     <main>
       <div class="controls">
         <p id="resultsInfo" class="resultsInfo"><span>Showing: </span>Marvel</p>
-        <button class="resultsInfo__btn">
-          <i class="fas fa-bars">Edit Search</i>
-        </button>
-        <video class="resultsInfo__video">
-          <source src="./assets/Result Not Found.mp4" type="video/mp4" />
-        </video>
-
+        <div class="resultsInfo__errorPage">
+          <button class="resultsInfo__errorPage--btn click">
+            <i class="fas fa-bars">Edit Search</i>
+          </button>
+          <p class="resultsInfo__errorPage--para">"Oops! We couldn't find the movie you were looking for. Try searching for another title and please check the spelling!"            
+          </p>
+          <div class="resultsInfo__errorPage--img-wrapper">
+            <img src="./assets/Search not found.png" alt="" class="resultsInfo__errorPage--img"/>       
+           
+          </div>
+        </div>
         <div>
           <label for="sortSelect">Sort:</label>
           <select id="sortSelect">

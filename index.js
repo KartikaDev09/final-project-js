@@ -23,10 +23,12 @@ async function getMovies(searchTerm) {
     currentMovies = data.Search;
     resultsInfo.textContent = `Showing: ${searchTerm}`;
     sortSelect.value = 'default';
-    renderMovies(currentMovies);
+    // resultsInfo__errorPage.display = "none";
+    renderMovies(currentMovies)
+    
   } else {
     resultsInfo.textContent = `Showing: ${searchTerm}`;
-    moviesGrid.innerHTML = `<p>"Oops! We couldn't find the movie you were looking for. Try searching for another title and please check the spelling!"</p>`;
+    moviesGrid.innerHTML = '<p></p>';
     currentMovies = [];
   }
 }
