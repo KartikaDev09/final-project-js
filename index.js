@@ -3,6 +3,11 @@ const moviesGrid = document.querySelector("#moviesGrid")
 const resultsInfo = document.querySelector("#resultsInfo")
 const searchInput = document.querySelector("#searchInput")
 const searchForm = document.querySelector("#searchForm");
+const errorPage = document.querySelector(".resultsInfo__errorPage")
+document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click', () => {
+  window.location.reload();
+});
+
 
 let currentMovies = []
 
@@ -23,12 +28,13 @@ async function getMovies(searchTerm) {
     currentMovies = data.Search;
     resultsInfo.textContent = `Showing: ${searchTerm}`;
     sortSelect.value = 'default';
-    // resultsInfo__errorPage.display = "none";
+    errorPage.style.display = "none";
     renderMovies(currentMovies)
     
   } else {
     resultsInfo.textContent = `Showing: ${searchTerm}`;
     moviesGrid.innerHTML = '<p></p>';
+    errorPage.style.display = "block";
     currentMovies = [];
   }
 }
