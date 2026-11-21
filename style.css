@@ -376,7 +376,7 @@ main {
   border-radius: 500px;
   border: 2px solid rgb(229, 231, 235);
   padding: 20px 192px 20px 32px;
-  color: #a0aec0;
+  color: #0a356e;
   font-size: 16px;
   font-weight: 500;
   position: absolute;
@@ -396,6 +396,38 @@ main {
   border-radius: 500px;
   z-index: 2;
 }
+
+/* MODAL */
+.modal__joinIn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 700px;
+  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: darkolivegreen;
+  color: #f0f0f0;
+}
+
+
+
+/* .modal__signIn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 700px;
+  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: darkolivegreen;
+  color: #f0f0f0;
+} */
+
 
 /* FOOTER */
 footer {

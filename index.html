@@ -147,9 +147,19 @@
           </div>
         </div>
       </div>
-      <div class="modal">
-        <div class="modal__joinIn"></div>
-        <div class="modal__signIn"></div>
+      <div class="modal" id="modal">
+        <div class="modal__joinIn">
+          <h3>Please fill out the form below and select the account selections.</h3>
+          <form action="/action_page.php">
+            <label for="accounts">Select accounts:</label>
+            <select name="accounts" id="accounts">
+              <option value="adults">Adults</option>
+              <option value="children">Children</option>
+              <input type="submit">
+            </select>
+          </form>
+        <div>
+        <div class="modal__signIn">Please enter your credentials below: </div>
       </div>
     </main>
 

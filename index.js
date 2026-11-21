@@ -5,6 +5,7 @@ const searchInput = document.querySelector("#searchInput")
 const searchForm = document.querySelector("#searchForm");
 const errorPage = document.querySelector(".resultsInfo__errorPage")
 const cta = document.querySelector("#cta")
+const modal = document.querySelector("#modal")
 
 // Edit Search button - reset page
 document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click', () => {
@@ -65,6 +66,7 @@ async function getMovies(searchTerm) {
     moviesGrid.innerHTML = '<p></p>';
     errorPage.style.display = "block";
     cta.style.display = "none";
+    modal.style.display = "none";
     currentMovies = [];
   }
 }
