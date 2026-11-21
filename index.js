@@ -5,10 +5,22 @@ const searchInput = document.querySelector("#searchInput")
 const searchForm = document.querySelector("#searchForm");
 const errorPage = document.querySelector(".resultsInfo__errorPage")
 const cta = document.querySelector("#cta")
+
 // Edit Search button - reset page
 document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click', () => {
   window.location.reload();
 });
+
+function checkEmail() {
+  const emailInput = document.querySelector(".joinIn__email-input");
+  const button = document.querySelector(".joinIn__email-btn");
+  // check if the input is a non-empty string with an '@' symbol
+  if(emailInput.value.trim() !== "" &&  emailInput.value.includes("@")) {
+    button.disabled = false;
+  } else {
+    button.disabled = true;
+  }
+}
 
 
 let currentMovies = []

@@ -136,9 +136,9 @@
                 <br>
                 So many titles, so much to experience. Come join the experience!
               </p>
-              <form action="" class="joinIn__email">
-                <input type="email" class="joinIn__email-input" placeholder="Your E-mail Address">
-                <button type="submit" class="btn joinIn__email-btn">Join Now</button>
+              <form class="joinIn__email">
+                <input type="email" class="joinIn__email-input" placeholder="Enter your email" oninput="checkEmail()">
+                <button type="button" class="btn joinIn__email-btn" disabled>Join Now</button>
               </form>
             </div>
             <div class="signIn__button--wrapper">
@@ -146,6 +146,10 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="modal">
+        <div class="modal__joinIn"></div>
+        <div class="modal__signIn"></div>
       </div>
     </main>
 
