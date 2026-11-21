@@ -14,11 +14,16 @@
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
+  border-radius: 15px;
   
 }
 
 .btn:hover {
   background-color:olive
+}
+
+#accounts:hover {
+  background-color: olive;
 }
 
 body {
@@ -398,13 +403,20 @@ main {
 }
 
 /* MODAL */
+
+.input[type=text], input[type=password] {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
 .modal__joinIn {
   position: absolute;
-  top: 50%;
+  top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  height: 700px;
+  width: 100%;
+  max-width: 960px;
+  height: 500px;
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
@@ -412,21 +424,91 @@ main {
   color: #f0f0f0;
 }
 
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 32px;
+
+}
+
+.modal__joinIn-title {
+  margin-left: 32px;
+  font-size: 18px;
+  font-weight: 800;
+  
+}
+
+.modal__accounts-selection {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+
+
+}
+
+.modal__joinIn-btn {
+  height: 48px;
+  width: 160px;
+}
+
+.modal__signIn-btn {
+  height: 48px;
+  width: 160px;
+}
+
+.modal__cancel-btn {
+  height: 48px;
+  width: 160px;
+}
+
+.modal__psw {
+  margin-left: 8px;
+}
+
+.modal__signIn--cancel-btn {
+  margin-left: 32px;
+    
+}
+
+#accounts {
+  width: 160px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 15px;
+  height: 48px;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+}
+
 
 
 /* .modal__signIn {
   position: absolute;
-  top: 50%;
+  top: 33%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  height: 700px;
+  transform: translate(-50%, -50%);  
+  height: 500px;
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   border-radius: 20px;
   overflow: hidden;
   background-color: darkolivegreen;
   color: #f0f0f0;
+  width: 100%;
+  max-width: 960px;
 } */
+
+.modal__signIn-title {
+  margin-left: 32px;
+  font-size: 18px;
+  font-weight: 800;
+  
+}
+
+
 
 
 /* FOOTER */
