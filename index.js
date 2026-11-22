@@ -14,14 +14,27 @@ document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click',
 
 function checkEmail() {
   const emailInput = document.querySelector(".joinIn__email-input");
-  const button = document.querySelector(".joinIn__email-btn");
-  // check if the input is a non-empty string with an '@' symbol
-  if(emailInput.value.trim() !== "" &&  emailInput.value.includes("@")) {
-    button.disabled = false;
-  } else {
-    button.disabled = true;
+  const submitBtn = document.getElementById("submitBtn");
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    // Enable the button if the email is valid
+    submitBtn.disabled = !emailRegex.test(emailInput.value);
   }
-}
+
+  function handleSubmit(event) {
+    event.preventDefault(); // Prevent the default form submission
+    toggleModal(); // Call your toggleModal function here
+
+
+
+
+  // check if the input is a non-empty string with an '@' symbol
+//   if(emailInput.value.trim() !== "" &&  emailInput.value.includes("@")) {
+//     button.disabled = false;
+//   } else {
+//     button.disabled = true;
+//   }
+// }
 
 
 let currentMovies = []
@@ -106,4 +119,9 @@ function sortMovies(sortType) {
   }   
 
   renderMovies(sortedMovies);
+}
+
+// this part is for modal joinIn & signIn 
+function toggleModal() {
+  console.log('toggleModal()')
 }

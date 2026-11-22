@@ -138,11 +138,11 @@
               </p>
               <form class="joinIn__email">
                 <input type="email" class="joinIn__email-input" placeholder="Enter your email" oninput="checkEmail()">
-                <button type="button" class="btn joinIn__email-btn" disabled>Join Now</button>
+                <button type="submit" class="btn joinIn__email-btn" id="submitBtn" disabled>Join Now</button>
               </form>
             </div>
             <div class="signIn__button--wrapper">
-              <button type="submit" class="btn signIn__btn">Sign In</button>                           
+              <button type="submit" class="btn signIn__btn" click onclick="toggleModal()">Sign In</button>                           
             </div>
           </div>
         </div>
@@ -173,6 +173,9 @@
             <button class="btn modal__joinIn-btn" type="submit">Join In</button>
             <!-- <input type="submit" class="btn modal__joinIn-btn"> -->
           </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
         </div>
         <div class="modal__signIn">
           <h3 class="modal__signIn-title">Please enter your credentials below:</h3>

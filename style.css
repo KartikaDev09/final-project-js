@@ -6,6 +6,7 @@
 
 .click {
   cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .btn {
@@ -15,6 +16,7 @@
   font-weight: 700;
   font-size: 16px;
   border-radius: 15px;
+  transition: all 300ms ease;
   
 }
 
@@ -25,6 +27,8 @@
 #accounts:hover {
   background-color: olive;
 }
+
+
 
 body {
   font-family: "Geist", sans-serif;
@@ -402,11 +406,12 @@ main {
   z-index: 2;
 }
 
-/* MODAL */
+/* MODAL SIGNIN & MODAL JOININ */
 
 .input[type=text], input[type=password] {
   display: inline-block;
   box-sizing: border-box;
+  /* outline: none; */
 }
 
 .modal__joinIn {
@@ -417,11 +422,12 @@ main {
   width: 100%;
   max-width: 960px;
   height: 500px;
-  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  /* box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55); */
   border-radius: 20px;
   overflow: hidden;
   background-color: darkolivegreen;
   color: #f0f0f0;
+  visibility: hidden;
 }
 
 .modal__form {
@@ -486,20 +492,21 @@ main {
 
 
 
-/* .modal__signIn {
+.modal__signIn {
   position: absolute;
   top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);  
   height: 500px;
-  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  /* box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55); */
   border-radius: 20px;
   overflow: hidden;
   background-color: darkolivegreen;
   color: #f0f0f0;
   width: 100%;
   max-width: 960px;
-} */
+  visibility: hidden;
+}
 
 .modal__signIn-title {
   margin-left: 32px;
@@ -508,7 +515,20 @@ main {
   
 }
 
+/* MODAL OPEAN MODAL CLOSE */
+.modal__open {
+  z-index: 60;
+  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  visibility: visible;
+}
 
+
+
+
+/* MODAL OVERLAY LOADING */
+.modal__overlay--loading {
+  background-color: blue;
+}
 
 
 /* FOOTER */
