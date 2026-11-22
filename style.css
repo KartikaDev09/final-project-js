@@ -197,7 +197,7 @@ main {
   max-width: 1200px;
   margin: -20px auto 20px;
 }
-
+/* line 201 - 231 is for the error page when user misstyped/movie not available */
 .resultsInfo__errorPage {
   position: absolute;
   top: 50%;
@@ -462,11 +462,13 @@ main {
 .modal__signIn-btn {
   height: 48px;
   width: 160px;
+  
 }
 
 .modal__cancel-btn {
   height: 48px;
   width: 160px;
+  
 }
 
 .modal__psw {
@@ -504,7 +506,8 @@ main {
   width: 100%;
   max-width: 960px;
   visibility: hidden;
-  z-index: -1;
+  /* z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease; */
 
   
 }
@@ -516,7 +519,7 @@ main {
   
 }
 
-/* MODAL OPEAN MODAL CLOSE */
+/* MODAL OVERLAY OPEN & CLOSE FOR THE 2 FORMS - see JS function toggleModal (type) and handleSubmit(event) */
 .modal--open.modal--joinIn .modal__joinIn {
   z-index: 60;
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
@@ -528,9 +531,6 @@ main {
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   visibility: visible;
 }
-
-
-
 
 
 /* MODAL OVERLAY LOADING */
