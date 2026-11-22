@@ -16,6 +16,7 @@ document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click',
 let isModalOpen = false;
 function toggleModal() {
   if(isModalOpen) {
+    isModalOpen = false;
     return document.body.classList.remove("modal--open");
   }
   isModalOpen = true;
