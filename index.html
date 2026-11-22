@@ -136,13 +136,13 @@
                 <br>
                 So many titles, so much to experience. Come join the experience!
               </p>
-              <form class="joinIn__email">
+              <form class="joinIn__email" onsubmit="handleSubmit(event)">
                 <input type="email" class="joinIn__email-input" placeholder="Enter your email" oninput="checkEmail()">
                 <button type="submit" class="btn joinIn__email-btn" id="submitBtn" disabled>Join Now</button>
               </form>
             </div>
             <div class="signIn__button--wrapper">
-              <button type="submit" class="btn signIn__btn" click onclick="toggleModal()">Sign In</button>                           
+              <button type="submit" class="btn signIn__btn" onclick="toggleModal()">Sign In</button>                           
             </div>
           </div>
         </div>
