@@ -517,13 +517,13 @@ main {
 }
 
 /* MODAL OPEAN MODAL CLOSE */
-.modal--open .modal__joinIn {
+.modal--open.modal--joinIn .modal__joinIn {
   z-index: 60;
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   visibility: visible;
 }
 
-.modal--open .modal__signIn {
+.modal--open.modal--signIn .modal__signIn {
   z-index: 60;
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   visibility: visible;

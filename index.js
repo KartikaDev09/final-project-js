@@ -12,17 +12,6 @@ document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click',
   window.location.reload();
 });
 
-// this part is for modal joinIn & signIn 
-let isModalOpen = false;
-function toggleModal() {
-  if(isModalOpen) {
-    isModalOpen = false;
-    return document.body.classList.remove("modal--open");
-  }
-  isModalOpen = true;
-  document.body.classList +=  " modal--open";
-}
-
 
 let currentMovies = []
 // Search movies
@@ -108,6 +97,17 @@ function sortMovies(sortType) {
   renderMovies(sortedMovies);
 }
 
+// this part is for modal joinIn & signIn 
+let isModalOpen = false;
+function toggleModal(type) {
+  if(isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open", "modal--joinIn", "modal--signIn");
+  }
+  isModalOpen = true;
+  document.body.classList.add("modal--open", `modal--${type}`);
+}
+
 // this part handle the joinIn__email validation
 function checkEmail() {
   const emailInput = document.querySelector(".joinIn__email-input");
@@ -120,6 +120,7 @@ function checkEmail() {
 
   function handleSubmit(event) {
     event.preventDefault(); // Prevent the default form submission
-    toggleModal(); // Call your toggleModal function here
+    toggleModal("joinIn"); // Call your toggleModal function here
   }
+
 
