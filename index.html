@@ -138,11 +138,11 @@
               </p>
               <form class="joinIn__email" onsubmit="handleSubmit(event)">
                 <input type="email" class="joinIn__email-input" placeholder="Enter your email" oninput="checkEmail()">
-                <button type="submit" class="btn joinIn__email-btn" id="submitBtn" disabled>Join Now</button>
+                <button type="submit" class="btn joinIn__email-btn" form="modal__joinIn-form" id="submitBtn" disabled>Join Now</button>
               </form>
             </div>
             <div class="signIn__button--wrapper">
-              <button type="submit" class="btn signIn__btn" onclick="toggleModal()">Sign In</button>                           
+              <button type="submit" class="btn signIn__btn" form="modal__signIn-form" onclick="toggleModal()">Sign In</button>                           
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@
       <div class="modal" id="modal">
         <div class="modal__joinIn">
           <h3 class="modal__joinIn-title">Please fill out the form below and select the account selections.</h3>
-          <form class="modal__form modal__joinIn-form" action="/action_page.php">
+          <form class="modal__form modal__joinIn-form" id="modal__joinIn-form" action="/action_page.php">
             <div class="form__item">
               <label class="form__item--label">Name:</label>
               <input class="input" name="user_name" type="text"></input>
@@ -170,7 +170,7 @@
                 <option value="children">Children</option>              
               </select>
             </div>
-            <button class="btn modal__joinIn-btn" type="submit">Join In</button>            
+            <button class="btn modal__joinIn-btn" type="submit">Join</button>            
           </form>
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
@@ -178,7 +178,7 @@
         </div>
         <div class="modal__signIn">
           <h3 class="modal__signIn-title">Please enter your credentials below:</h3>
-          <form class="modal__form modal__signIn-form" action="/action_page.php">
+          <form class="modal__form modal__signIn-form" id="modal__signIn-form" action="/action_page.php">
             <div class="form__item">
               <label class="form__item--label">Email:</label>
               <input class="input" name="user_email" type="email" required></input>
