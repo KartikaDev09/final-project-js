@@ -12,7 +12,15 @@ document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click',
   window.location.reload();
 });
 
-
+// this part is for modal joinIn & signIn 
+let isModalOpen = false;
+function toggleModal() {
+  if(isModalOpen) {
+    return document.body.classList.remove("modal--open");
+  }
+  isModalOpen = true;
+  document.body.classList +=  " modal--open";
+}
 
 
 let currentMovies = []
@@ -114,7 +122,3 @@ function checkEmail() {
     toggleModal(); // Call your toggleModal function here
   }
 
-// this part is for modal joinIn & signIn 
-function toggleModal() {
-  console.log('toggleModal()')
-}

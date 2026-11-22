@@ -422,7 +422,6 @@ main {
   width: 100%;
   max-width: 960px;
   height: 500px;
-  /* box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55); */
   border-radius: 20px;
   overflow: hidden;
   background-color: darkolivegreen;
@@ -497,8 +496,7 @@ main {
   top: 33%;
   left: 50%;
   transform: translate(-50%, -50%);  
-  height: 500px;
-  /* box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55); */
+  height: 500px;  
   border-radius: 20px;
   overflow: hidden;
   background-color: darkolivegreen;
@@ -506,6 +504,9 @@ main {
   width: 100%;
   max-width: 960px;
   visibility: hidden;
+  z-index: -1;
+
+  
 }
 
 .modal__signIn-title {
@@ -516,11 +517,18 @@ main {
 }
 
 /* MODAL OPEAN MODAL CLOSE */
-.modal__open {
+.modal--open .modal__joinIn {
   z-index: 60;
   box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
   visibility: visible;
 }
+
+.modal--open .modal__signIn {
+  z-index: 60;
+  box-shadow: 0 20px 80px rgb(0, 0, 0, 0.55);
+  visibility: visible;
+}
+
 
 
 
