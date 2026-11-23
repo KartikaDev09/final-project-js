@@ -427,6 +427,7 @@ main {
   background-color: darkolivegreen;
   color: #f0f0f0;
   visibility: hidden;
+  
 }
 
 .modal__form {
@@ -533,10 +534,58 @@ main {
 }
 
 
-/* MODAL OVERLAY LOADING */
+/* MODAL OVERLAY LOADING & success */
+
+
 .modal__overlay--loading {
-  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #242426;
+  font-size: 80px;
+  display: none;
+  /* display: block; */
+  z-index: -1;
 }
+
+.modal__overlay--success {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(151, 151, 80);
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+  /* display: none; */
+  display: block;
+  z-index: -1;
+}
+
+
+.fa-spinner {
+  animation: spinner 500ms infinite linear; 
+  
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 
 /* FOOTER */

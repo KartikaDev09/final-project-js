@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simplified Movies API ref</title>
     <link rel="stylesheet" href="style.css" />
-    
+    <script
+      src="https://kit.fontawesome.com/457fcf0219.js"crossorigin="anonymous"></script>
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -142,7 +143,7 @@
               </form>
             </div>
             <div class="signIn__button--wrapper">
-              <button type="submit" class="btn signIn__btn" form="modal__signIn-form" onclick="toggleModal(`signIn`)">Sign In</button>                           
+              <button type="button" class="btn signIn__btn" onclick="toggleModal(`signIn`)">Sign In</button>                           
             </div>
           </div>
         </div>
@@ -175,6 +176,9 @@
           <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner"></i>
           </div>
+          <div class="modal__overlay modal__overlay--success">
+            You have successfully joining!
+          </div>
         </div>
         <div class="modal__signIn">
           <h3 class="modal__signIn-title">Please enter your credentials below:</h3>
@@ -199,6 +203,12 @@
           <div class="modal__signIn--cancel-btn">
             <button class="btn modal__cancel-btn" onclick="toggleModal(`signIn`)">Cancel</button>
             <span class="modal__psw">Forgot <a href="#">password?</a></span>
+          </div>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            You have successfully login to your account! Congratulations!
           </div>
         </div>
       </div>
