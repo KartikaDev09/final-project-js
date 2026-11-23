@@ -174,33 +174,21 @@ function checkEmail() {
     
 }
   
-
-// Add event listener for closing the modal_exit for joinIn
-// document.querySelectorAll('.modal__exit').forEach(button => {
-//   button.addEventListener('click', () =>  {
-//     document.querySelectorAll('.modal__overlay').forEach(overlay => {
-//       overlay.classList.remove('modal__overlay--visible');
-//     });
-
-//     isModalOpen = false;
-//     document.body.classList.remove(
-//       'modal--open', 'modal--joinIn', 'modal--signIn'
-//     );
-//   });
-// });
-
-
-document.querySelectorAll('.modal__exit').forEach(button => {
-  button.addEventListener('click', () => {
+document.addEventListener('click', (event) => {
+  if (event.target.closest('.modal__exit')) {
     document.querySelectorAll('.modal__overlay').forEach(overlay => {
       overlay.classList.remove('modal__overlay--visible');
+      document.querySelectorAll('.modal__form').forEach(form => {
+  form.reset();
+});
     });
 
     isModalOpen = false;
+
     document.body.classList.remove(
       'modal--open',
       'modal--joinIn',
       'modal--signIn'
     );
-  });
+  }
 });
