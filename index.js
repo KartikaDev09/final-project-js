@@ -129,17 +129,42 @@ function checkEmail() {
     const modalLogin = document.querySelector(".modal__signIn");
     const loading = modalLogin.querySelector(".modal__overlay--loading");
     const success = modalLogin.querySelector(".modal__overlay--success");
-    loading.classList += " modal__overlay--visible";
-    success.classList.remove("modal__overlay--visible");
+    loading.classList.add("modal__overlay--visible");
+    setTimeout(() => {
+      loading.classList.remove("modal__overlay--visible"); 
+      success.classList.add("modal__overlay--visible");},1000);
   }
+    
+    
+        
+    
+
+  
 
 
 
   function join(event) {
     event.preventDefault();
     const modalJoin = document.querySelector(".modal__joinIn");
-    const loading = modalJoin.querySelector(".modal__overlay--loading");
+    const loading = modalJoin.querySelector(".modal__overlay--loading");    
     const success = modalJoin.querySelector(".modal__overlay--success");
-    loading.classList += " modal__overlay--visible";
-    success.classList.remove("modal__overlay--visible");
-  }
+    loading.classList.add("modal__overlay--visible");
+    try {
+      setTimeout(()=> {
+        
+        const isSuccess = true;
+        loading.classList.remove("modal__overlay--visible"); 
+        if(isSuccess) {
+          success.classList.add("modal__overlay--visible");
+        } else {
+          throw new Error("Something went wrong! Please try again.");
+        }
+      }, 1000);
+    } catch(error) {
+      loading.classList.remove("modal__overlay--visible");
+      alert(error.message);
+      // document.querySelector(".modal__overlay--success").reset()
+    }}
+    
+
+    
