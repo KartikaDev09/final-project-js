@@ -176,21 +176,31 @@ function checkEmail() {
   
 
 // Add event listener for closing the modal_exit for joinIn
-document.querySelector('.modal__exit').addEventListener('click', () => {
-    toggleModal(`joinIn`); // Close the modal using the toggle function
-    window.location.reload(); // Reload the overlay after closing
-});
+// document.querySelectorAll('.modal__exit').forEach(button => {
+//   button.addEventListener('click', () =>  {
+//     document.querySelectorAll('.modal__overlay').forEach(overlay => {
+//       overlay.classList.remove('modal__overlay--visible');
+//     });
 
-// Add event listener for closing the modal_exit for signIn
-document.querySelector('.modal__exit').addEventListener('click', () => {
-    toggleModal(`signIn`); // Close the modal using the toggle function
-    window.location.reload(); // Reload the overlay after closing
-});
-
-// document.querySelectorAll('.fas.fa-times').forEach(icon => {
-//   icon.addEventListener('click', () => {
-//     window.location.reload();
+//     isModalOpen = false;
+//     document.body.classList.remove(
+//       'modal--open', 'modal--joinIn', 'modal--signIn'
+//     );
 //   });
 // });
 
-    
+
+document.querySelectorAll('.modal__exit').forEach(button => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.modal__overlay').forEach(overlay => {
+      overlay.classList.remove('modal__overlay--visible');
+    });
+
+    isModalOpen = false;
+    document.body.classList.remove(
+      'modal--open',
+      'modal--joinIn',
+      'modal--signIn'
+    );
+  });
+});
