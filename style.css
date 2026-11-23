@@ -590,10 +590,12 @@ main {
 
 .modal__exit {
   position: absolute;
+  /* position: fixed; */
   top: 30px;
   right: 40px;
   color: #fff;
-  font-size: 100;
+  /* font-size: 100; */
+  font-size: 24px;
   z-index: 100;
 }
 

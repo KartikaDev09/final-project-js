@@ -102,7 +102,8 @@ let isModalOpen = false;
 function toggleModal(type) {
   if(isModalOpen) {
     isModalOpen = false;
-    return document.body.classList.remove("modal--open", "modal--joinIn", "modal--signIn");
+    document.body.classList.remove("modal--open", "modal--joinIn", "modal--signIn");
+    return;
   }
   isModalOpen = true;
   document.body.classList.add("modal--open", `modal--${type}`);
@@ -173,8 +174,23 @@ function checkEmail() {
     
 }
   
-document.querySelector('.fas.fa-times').addEventListener('click', () => {
-  window.location.reload();
+
+// Add event listener for closing the modal_exit for joinIn
+document.querySelector('.modal__exit').addEventListener('click', () => {
+    toggleModal(`joinIn`); // Close the modal using the toggle function
+    window.location.reload(); // Reload the overlay after closing
 });
+
+// Add event listener for closing the modal_exit for signIn
+document.querySelector('.modal__exit').addEventListener('click', () => {
+    toggleModal(`signIn`); // Close the modal using the toggle function
+    window.location.reload(); // Reload the overlay after closing
+});
+
+// document.querySelectorAll('.fas.fa-times').forEach(icon => {
+//   icon.addEventListener('click', () => {
+//     window.location.reload();
+//   });
+// });
 
     
