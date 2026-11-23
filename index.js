@@ -123,4 +123,23 @@ function checkEmail() {
     toggleModal("joinIn"); // Call your toggleModal function here
   }
 
+// this part is for modal loading & success for signIn(login)
+  function login(event) {
+    event.preventDefault();
+    const modalLogin = document.querySelector(".modal__signIn");
+    const loading = modalLogin.querySelector(".modal__overlay--loading");
+    const success = modalLogin.querySelector(".modal__overlay--success");
+    loading.classList += " modal__overlay--visible";
+    success.classList.remove("modal__overlay--visible");
+  }
 
+
+
+  function join(event) {
+    event.preventDefault();
+    const modalJoin = document.querySelector(".modal__joinIn");
+    const loading = modalJoin.querySelector(".modal__overlay--loading");
+    const success = modalJoin.querySelector(".modal__overlay--success");
+    loading.classList += " modal__overlay--visible";
+    success.classList.remove("modal__overlay--visible");
+  }
