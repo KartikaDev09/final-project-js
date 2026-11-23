@@ -131,15 +131,20 @@ function checkEmail() {
     const success = modalLogin.querySelector(".modal__overlay--success");
     loading.classList.add("modal__overlay--visible");
     setTimeout(() => {
-      loading.classList.remove("modal__overlay--visible"); 
-      success.classList.add("modal__overlay--visible");},1000);
+      try {
+        const  isSuccess = true;
+        if(!isSuccess) {
+          console.log("Error: Something went wrong! Please try again.");
+          throw new Error("Something went wrong! Please try again.");
+          }      
+          success.classList.add("modal__overlay--visible");
+        } catch(error) {
+          alert(error.message);
+          loading.classList.remove("modal__overlay--visible"); 
+        }
+      }, 1000);
   }
-    
-    
-        
-    
 
-  
 
 
 
@@ -149,22 +154,27 @@ function checkEmail() {
     const loading = modalJoin.querySelector(".modal__overlay--loading");    
     const success = modalJoin.querySelector(".modal__overlay--success");
     loading.classList.add("modal__overlay--visible");
-    try {
-      setTimeout(()=> {
-        
-        const isSuccess = true;
-        loading.classList.remove("modal__overlay--visible"); 
-        if(isSuccess) {
-          success.classList.add("modal__overlay--visible");
-        } else {
-          throw new Error("Something went wrong! Please try again.");
-        }
-      }, 1000);
-    } catch(error) {
-      loading.classList.remove("modal__overlay--visible");
-      alert(error.message);
-      // document.querySelector(".modal__overlay--success").reset()
-    }}
     
+      setTimeout(()=> {
+        try {
+          const isSuccess = true;
+          
+          if(!isSuccess) {
+            console.log("Error: Something went wrong! Please try again.");
+            throw new Error("Something went wrong! Please try again.");
+          }
+          success.classList.add("modal__overlay--visible");
+      } catch (error) {
+        alert(error.message);
+        loading.classList.remove("modal__overlay--visible");
+      }
+    }, 1000);
+    // document.querySelector(".modal__overlay.modal__overlay--success.modal__overlay--visible").reset()
+    
+}
+  
+document.querySelector('.fas.fa-times').addEventListener('click', () => {
+  window.location.reload();
+});
 
     

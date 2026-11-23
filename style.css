@@ -588,6 +588,16 @@ main {
   }
 }
 
+.modal__exit {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 100;
+  z-index: 100;
+}
+
+
 
 
 /* FOOTER */
