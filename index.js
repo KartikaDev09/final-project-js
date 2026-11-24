@@ -7,7 +7,7 @@ const errorPage = document.querySelector(".resultsInfo__errorPage")
 const cta = document.querySelector("#cta")
 const modal = document.querySelector("#modal")
 
-// Edit Search button - reset page
+// Edit Search button to reload page
 document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click', () => {
   window.location.reload();
 });
@@ -110,14 +110,6 @@ function toggleModal(type) {
   isModalOpen = true;
   document.body.classList.add("modal--open", `modal--${type}`, ".modal__joinIn-btn");
 }
-
-
-
-
-
-
-
-
 
 
 // this part handle the joinIn__email validation
