@@ -58,6 +58,7 @@ async function getMovies(searchTerm) {
     modal.style.display = "none";
     sortSelect.style.display = "none";
     sortSelectLabel.style.display = "none";
+    featureMovies.style.display = "none";
     currentMovies = [];
   }
 }
