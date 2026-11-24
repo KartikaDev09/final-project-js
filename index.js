@@ -111,6 +111,8 @@ function toggleModal(type) {
   document.body.classList.add("modal--open", `modal--${type}`);
 }
 
+
+
 // this part handle the joinIn__email validation
 function checkEmail() {
   const emailInput = document.querySelector(".joinIn__email-input");

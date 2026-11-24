@@ -226,7 +226,7 @@ main {
 }
 
 .resultsInfo__errorPage--img {
-  size: 100%;
+  width: 100%;
   max-width: 720px;
   border-radius: 25%;
 }
@@ -411,7 +411,7 @@ main {
 .input[type=text], input[type=password] {
   display: inline-block;
   box-sizing: border-box;
-  /* outline: none; */
+  
 }
 
 .modal__joinIn {
@@ -451,13 +451,12 @@ main {
   display: flex;
   flex-direction: row;
   width: 85%;
-
-
 }
 
 .modal__joinIn-btn {
   height: 48px;
   width: 160px;
+  
 }
 
 .modal__signIn-btn {
@@ -466,7 +465,7 @@ main {
   
 }
 
-.modal__Reset-btn {
+.modal__reset-btn {
   height: 48px;
   width: 160px;
   
@@ -476,7 +475,7 @@ main {
   margin-left: 8px;
 }
 
-.modal__signIn--Reset-btn {
+.modal__signIn--reset-btn {
   margin-left: 32px;
     
 }
@@ -507,10 +506,7 @@ main {
   width: 100%;
   max-width: 960px;
   visibility: hidden;
-  /* z-index: -1;
-  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease; */
-
-  
+    
 }
 
 .modal__signIn-title {
@@ -637,3 +633,4 @@ footer {
     flex-direction: column;
   }
 }
+
