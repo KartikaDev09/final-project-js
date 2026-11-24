@@ -16,7 +16,7 @@
   font-weight: 700;
   font-size: 16px;
   border-radius: 15px;
-  transition: all 300ms ease;
+  
   
 }
 
@@ -456,7 +456,7 @@ main {
 .modal__joinIn-btn {
   height: 48px;
   width: 160px;
-  
+    
 }
 
 .modal__signIn-btn {

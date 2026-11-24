@@ -104,12 +104,19 @@ let isModalOpen = false;
 function toggleModal(type) {
   if(isModalOpen) {
     isModalOpen = false;
-    document.body.classList.remove("modal--open", "modal--joinIn", "modal--signIn");
+    document.body.classList.remove("modal--open", "modal--joinIn", "modal--signIn", ".modal__joinIn-btn");
     return;
   }
   isModalOpen = true;
-  document.body.classList.add("modal--open", `modal--${type}`);
+  document.body.classList.add("modal--open", `modal--${type}`, ".modal__joinIn-btn");
 }
+
+
+
+
+
+
+
 
 
 
