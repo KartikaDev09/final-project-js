@@ -53,8 +53,8 @@
       <div class="controls">
         <p id="resultsInfo" class="resultsInfo"><span>Showing: </span>Movies</p>
         <div class="resultsInfo__errorPage">
-          <button class="btn resultsInfo__errorPage--btn click"> 
-            <i class="fas fa-bars">Edit Search</i>
+          <button type="button" class=" btn resultsInfo__errorPage--btn">
+            Edit Search
           </button>
           <p class="resultsInfo__errorPage--para">"Oops! We couldn't find the movie you were looking for. Try searching for another title and please check the spelling!"            
           </p>
@@ -64,7 +64,7 @@
           </div>
         </div>
         <div>
-          <label for="sortSelect">Sort:</label>
+          <label id="sortSelectLabel" for="sortSelect">Sort:</label>
           <select id="sortSelect">
             <option value="default">Default</option>
             <option value="a-z">A - Z</option>
@@ -155,15 +155,15 @@
           <form class="modal__form modal__joinIn-form" id="modal__joinIn-form" onsubmit="join(event)">
             <div class="form__item">
               <label class="form__item--label">Name:</label>
-              <input class="input" name="user_name" type="text"></input>
+              <input class="input" name="user_name" type="text" required></input>
             </div>
             <div class="form__item">
               <label class="form__item--label">Email:</label>
-              <input class="input" name="user_email" type="email"></input>
+              <input class="input" name="user_email" type="email" required></input>
             </div>
             <div class="form__item">
               <label class="form__item--label">Date of Birth:</label>
-              <input class="input" name="user_dob" type="date"></input>
+              <input class="input" name="user_dob" type="date" required></input>
             </div>
             <div class="modal__accounts-selection">
               <label for="accounts">Select accounts:</label>
@@ -202,8 +202,8 @@
               <input type="checkbox" checked="checked" name="remember"> Remember me
             </label>
           </form>
-          <div class="modal__signIn--cancel-btn">
-            <button class="btn modal__cancel-btn" onclick="toggleModal(`signIn`)">Cancel</button>
+          <div class="modal__signIn--Reset-btn">
+            <button type="reset" id="resetButton" class="btn modal__Reset-btn">RESET</button>
             <span class="modal__psw">Forgot <a href="#">password?</a></span>
           </div>
           <div class="modal__overlay modal__overlay--loading">

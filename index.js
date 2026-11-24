@@ -56,6 +56,8 @@ async function getMovies(searchTerm) {
     errorPage.style.display = "block";
     cta.style.display = "none";
     modal.style.display = "none";
+    sortSelect.style.display = "none";
+    sortSelectLabel.style.display = "none";
     currentMovies = [];
   }
 }
@@ -147,8 +149,6 @@ function checkEmail() {
   }
 
 
-
-
   function join(event) {
     event.preventDefault();
     const modalJoin = document.querySelector(".modal__joinIn");
@@ -170,10 +170,11 @@ function checkEmail() {
         loading.classList.remove("modal__overlay--visible");
       }
     }, 1000);
-    // document.querySelector(".modal__overlay.modal__overlay--success.modal__overlay--visible").reset()
+    
     
 }
-  
+
+// close-button event listener & .reset() for form fields. use this code approach because the close buttons use Font Awesome icons, which can replace the original <i> elements with SVG elemts after JS attaches the click Listener.
 document.addEventListener('click', (event) => {
   if (event.target.closest('.modal__exit')) {
     document.querySelectorAll('.modal__overlay').forEach(overlay => {
@@ -191,4 +192,10 @@ document.addEventListener('click', (event) => {
       'modal--signIn'
     );
   }
+});
+
+// this part for RESET button on the #modal__signIn-form
+document.getElementById('resetButton').addEventListener('click', () => {
+  document.getElementById('modal__signIn-form').reset();
+  console.log("form has been reset");
 });

@@ -466,7 +466,7 @@ main {
   
 }
 
-.modal__cancel-btn {
+.modal__Reset-btn {
   height: 48px;
   width: 160px;
   
@@ -476,7 +476,7 @@ main {
   margin-left: 8px;
 }
 
-.modal__signIn--cancel-btn {
+.modal__signIn--Reset-btn {
   margin-left: 32px;
     
 }
