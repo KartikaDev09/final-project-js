@@ -613,13 +613,82 @@ main {
 .feature__header {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
   
+  align-items: center;
+      
+  
+}
+
+.feature__modal-exit {
+  
+  top: 30px;
+  right: 40px;
+  color: #fff;
+  font-size: 100;
+  font-size: 24px;
+  z-index: 100;
 }
 
 .feature__header-title {
   
 }
+
+/* Feature Search */
+.feature__search-form--group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.feature__search-form--input {
+  padding: 8px 40px 8px 8px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  border: 2px solid #333;
+  width: 380px;
+}
+
+.feature__search-form--input:hover {
+  border: 2px solid #00B;
+}
+
+.feature__search-form--input:focus {
+  outline: none;
+  border: 2px solid #00ff2a;
+}
+
+.feature__search-form--button {
+  position: absolute;
+  right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  transition: all 300ms ease;
+}
+
+.feature__search-form--button:hover {
+  background-color: #5f9bac;
+}
+
+.feature__search-form--icon {
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
+
+/* FEATURE SORT */
+#featureSortSelect {
+  width: 96px;
+  border: 2px solid #333;
+}
+
 
 /* FEATURE MOVIE GRID */
 
@@ -633,6 +702,8 @@ main {
   margin: 20px auto;
 
 }
+
+
 
 .feature-card {
   width: 100%;
