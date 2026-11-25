@@ -59,6 +59,7 @@ async function getMovies(searchTerm) {
     sortSelect.style.display = "none";
     sortSelectLabel.style.display = "none";
     featureMovies.style.display = "none";
+    featureBtn.style.display = "none";
     currentMovies = [];
   }
 }
@@ -197,7 +198,7 @@ document.addEventListener('click', (event) => {
 });
 
 // this part for RESET button on the #modal__signIn-form
-document.getElementById('resetButton').addEventListener('click', () => {
+document.getElementById('resetButton').addEventListener('click', () => {                                                           
   document.getElementById('modal__signIn-form').reset();
   console.log("form has been reset");
 });
