@@ -596,6 +596,7 @@ main {
 }
 
 /* FEATURE MOVIES 2026 */
+/* OVERLAY LAYOUT */
 #featureOverlay {
   position: fixed;
   inset: 0;
@@ -604,19 +605,59 @@ main {
   z-index: 1000;
   overflow-y: auto;
   background-color: #00b4d8;
-  /* display: flex; */
-  display: none;
+  display: flex;
+  flex-direction: column;
+  /* display: none; */
 }
 
+.feature__header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+}
+
+.feature__header-title {
+  
+}
+
+/* FEATURE MOVIE GRID */
 
 .feature__grid {
-  display: grid;
-  
+  display: grid;  
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  width: 100%;
   max-width: 1200px;
   justify-content: center;
-  margin: -20px auto;
+  margin: 20px auto;
+
+}
+
+.feature-card {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.feature-card__img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.feature-card:hover {
+   box-shadow: 1px 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.feature-card__title {
+  font-size: 16px;
+  margin: 10px 0 5px 0;
+}
+
+.feature-card__year {
+  margin: 0;
+  color: #666;
 }
 
 

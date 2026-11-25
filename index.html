@@ -222,15 +222,79 @@
 
     <section id="featureMovies">       
       <div class="feature__overlay" id="featureOverlay">
-        <i class="fas fa-times modal__exit click" title="Close"></i>
-        <div class="feature__filter-sort">
-          <select id="featureSortSelect">
-            <option value="default">Sort By</option>
-            <option value="aToZ">A to Z</option>
-            <option value="zToA">Z to A</option>
-          </select>
-        </div>
+        <header class="feature__header">
+          <h2 class="feature__header-title">2026 Feature Movies</h2>
+          <i class="fas fa-times modal__exit click" title="Close"></i>
+          <form class="feature__search-form" id="featureSearchForm">
+            <div class="feature__search-form--group">
+              <input
+                class="feature__search-form--input"
+                type="text"
+                id="featureSearchInput"
+                placeholder="Search movies..."
+                required            
+              />
+              <button class="feature__search-form--btn" type="submit" aria-label="Search">
+                <svg
+                  class="feature__search-form--icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  >
+                  <circle cx="11" cy="11" r="7"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </button>
+            </div>
+          </form>
+          <div class="feature__filter-sort">
+            <select id="featureSortSelect">
+              <option value="default">Sort By</option>
+              <option value="aToZ">A to Z</option>
+              <option value="zToA">Z to A</option>
+            </select>
+          </div>
+        </header>
         <div class="feature__grid" id="featureGrid">
+          <div class="feature-card">
+            <img
+              class="feature-card__img"
+              src="https://m.media-amazon.com/images/M/MV5BZWZhYzI1YjktYzJjYy00NjIwLWE0MGItNWM4YWM2ZjFkNGM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg"
+              alt=""
+              />
+            <h2 class="feature-card__title">A Christmas story</h2>
+            <p class="feature-card__year">1983</p>
+          </div>        
+          <div class="feature-card">
+            <img
+              class="feature-card__img"
+              src="https://m.media-amazon.com/images/M/MV5BZWZhYzI1YjktYzJjYy00NjIwLWE0MGItNWM4YWM2ZjFkNGM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg"
+              alt=""
+              />
+            <h2 class="feature-card__title">A Christmas story</h2>
+            <p class="feature-card__year">1983</p>
+          </div>        
+          <div class="feature-card">
+            <img
+              class="feature-card__img"
+              src="https://m.media-amazon.com/images/M/MV5BZWZhYzI1YjktYzJjYy00NjIwLWE0MGItNWM4YWM2ZjFkNGM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg"
+              alt=""
+              />
+            <h2 class="feature-card__title">A Christmas story</h2>
+            <p class="feature-card__year">1983</p>
+          </div>        
+          <div class="feature-card">
+            <img
+              class="feature-card__img"
+              src="https://m.media-amazon.com/images/M/MV5BZWZhYzI1YjktYzJjYy00NjIwLWE0MGItNWM4YWM2ZjFkNGM0XkEyXkFqcGc@._V1_QL75_UX380_CR0,8,380,562_.jpg"
+              alt=""
+              />
+            <h2 class="feature-card__title">A Christmas story</h2>
+            <p class="feature-card__year">1983</p>
+          </div>        
           <div class="feature-card">
             <img
               class="feature-card__img"
