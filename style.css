@@ -604,7 +604,7 @@ main {
 
 /* FEATURE MOVIES 2026 */
 /* OVERLAY LAYOUT */
-#featureOverlay {
+.feature__Overlay {
   position: fixed;
   inset: 0;
   width: 100%;
@@ -614,7 +614,7 @@ main {
   background-color: #00b4d8;
   display: flex;
   flex-direction: column;
-  display: none;
+  visibility: hidden;
 }
 
 .feature__header {

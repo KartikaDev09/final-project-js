@@ -118,7 +118,7 @@ function toggleModal(type) {
 
 // this part for feature movies modal overlay
 let isFeatureModalOpen = false;
-function toggleModal() {
+function toggleFeatureModal() {
   if(isFeatureModalOpen) {
     isFeatureModalOpen = false;
     document.body.classList.remove("featureModal--open");
