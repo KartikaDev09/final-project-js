@@ -6,6 +6,7 @@ const searchForm = document.querySelector("#searchForm");
 const errorPage = document.querySelector(".resultsInfo__errorPage")
 const cta = document.querySelector("#cta")
 const modal = document.querySelector("#modal")
+const featureModal = document.querySelector("#featureMovies");
 
 // Edit Search button to reload page
 document.querySelector('.resultsInfo__errorPage--btn').addEventListener('click', () => {
@@ -111,6 +112,20 @@ function toggleModal(type) {
   }
   isModalOpen = true;
   document.body.classList.add("modal--open", `modal--${type}`, ".modal__joinIn-btn");
+}
+
+
+
+// this part for feature movies modal overlay
+let isFeatureModalOpen = false;
+function toggleModal() {
+  if(isFeatureModalOpen) {
+    isFeatureModalOpen = false;
+    document.body.classList.remove("featureModal--open");
+    return;
+  }
+  isFeatureModalOpen = true;
+  document.body.classList.add("featureModal--open");
 }
 
 

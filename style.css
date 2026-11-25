@@ -529,6 +529,13 @@ main {
   visibility: visible;
 }
 
+/* FEATURE MODAL OVERLAY OPEN & CLOSE */
+.featureModal--open .feature__overlay {
+  z-index: 1000;
+  /* box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55); */
+  visibility: visible;
+}
+
 
 /* MODAL OVERLAY LOADING & success */
 
