@@ -102,6 +102,34 @@ function sortMovies(sortType) {
   renderMovies(sortedMovies);
 }
 
+
+// this part is for Feature movies
+async function getFeatureMovies(searchTerm) {
+  const response = await fetch(
+    `https://www.omdbapi.com/?apikey=${API_KEY}&s=${encodeURIComponent(searchTerm)}&y=2026&type=movie`
+  );
+
+  const data = await response.json();
+  renderFeatureMovies(data.Search || []);
+}
+
+function renderFeatureMovies(movies) {
+  document.querySelector("#featureGrid").innerHTML = movies.map(movie => `
+    <div class="feature-card">
+      <img class="feature-card__img" src="${movie.Poster}" alt="${movie.Title}">
+      <h2>${movie.Title}</h2>
+      <p>${movie.Year}</p>
+    </div>
+  `).join("");
+}
+
+document.querySelector("#featureSearchForm").addEventListener("submit", e => {
+  e.preventDefault();
+  getFeatureMovies(document.querySelector("#featureSearchInput").value.trim());
+});
+
+
+
 // this part is for modal joinIn & signIn 
 let isModalOpen = false;
 function toggleModal(type) {
